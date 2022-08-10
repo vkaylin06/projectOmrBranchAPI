@@ -1,0 +1,656 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Get User logtoken from login endpoint",
+        "description": "",
+        "id": "login-module-api-automation;get-user-logtoken-from-login-endpoint",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2064894900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User add header",
+            "match": {
+              "location": "TC1_LoginStep.userAddHeader()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 206283300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User add basic authentication for login",
+            "match": {
+              "location": "TC1_LoginStep.userAddBasicAuthenticationForLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3001134000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User send post request for login endpoint",
+            "match": {
+              "location": "TC1_LoginStep.userSendPostRequestForLoginEndpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2701300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonStep.userShouldVerifyTheStatusCodeIs(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 454301500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User verify the login response body first name is \"Mary claena\" and get logtoken should be saved",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mary claena\"",
+                  "offset": 50
+                }
+              ],
+              "location": "TC1_LoginStep.userVerifyTheLoginResponseBodyFirstNameIsAndGetLogtokenShouldBeSaved(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "Login Module API Automation",
+    "description": "",
+    "id": "login-module-api-automation",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Features/TC1_Login.feature",
+    "tags": [
+      {
+        "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 13,
+        "name": "Adding user address",
+        "description": "",
+        "id": "address-module-api-automation;adding-user-address;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1810800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User add headers",
+            "match": {
+              "location": "TC2_AddressStep.userAddHeaders()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 142756000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User passes payload for adding address \"Mary\",\"Aylin\",\"9840089896\",\"AppaSwamy\",\"111\",\"222\",\"333\",\"60078\",\"Chennai\",\"home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mary\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"Aylin\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"9840089896\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"AppaSwamy\"",
+                  "offset": 67
+                },
+                {
+                  "val": "\"111\"",
+                  "offset": 79
+                },
+                {
+                  "val": "\"222\"",
+                  "offset": 85
+                },
+                {
+                  "val": "\"333\"",
+                  "offset": 91
+                },
+                {
+                  "val": "\"60078\"",
+                  "offset": 97
+                },
+                {
+                  "val": "\"Chennai\"",
+                  "offset": 105
+                },
+                {
+                  "val": "\"home\"",
+                  "offset": 115
+                }
+              ],
+              "location": "TC2_AddressStep.userPassesPayloadForAddingAddress(String,String,String,String,String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 788201500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User send post request for addUserAddress endpoint",
+            "match": {
+              "location": "TC2_AddressStep.userSendPostRequestForAddUserAddressEndpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 153000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonStep.userShouldVerifyTheStatusCodeIs(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10839700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User should verify the addUserAddress response body has message \"Address added successfully\" and get address_Id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Address added successfully\"",
+                  "offset": 64
+                }
+              ],
+              "location": "TC2_AddressStep.userShouldVerifyTheAddUserAddressResponseBodyHasMessageAndGetAddress_Id(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Address"
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "Updating user address",
+        "description": "",
+        "id": "address-module-api-automation;updating-user-address;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1627700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User add headers",
+            "match": {
+              "location": "TC2_AddressStep.userAddHeaders()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 20435600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "User passes payload for updating address\"Mary\",\"Claena\",\"9845578984\",\"HiraNandini\",\"111\",\"222\",\"333\",\"60078\",\"Chennai\",\"home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mary\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"Claena\"",
+                  "offset": 47
+                },
+                {
+                  "val": "\"9845578984\"",
+                  "offset": 56
+                },
+                {
+                  "val": "\"HiraNandini\"",
+                  "offset": 69
+                },
+                {
+                  "val": "\"111\"",
+                  "offset": 83
+                },
+                {
+                  "val": "\"222\"",
+                  "offset": 89
+                },
+                {
+                  "val": "\"333\"",
+                  "offset": 95
+                },
+                {
+                  "val": "\"60078\"",
+                  "offset": 101
+                },
+                {
+                  "val": "\"Chennai\"",
+                  "offset": 109
+                },
+                {
+                  "val": "\"home\"",
+                  "offset": 119
+                }
+              ],
+              "location": "TC2_AddressStep.userPassesPayloadForUpdatingAddress(String,String,String,String,String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 883510000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User send put request for updateUserAddress endpoint",
+            "match": {
+              "location": "TC2_AddressStep.userSendPutRequestForUpdateUserAddressEndpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 126800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonStep.userShouldVerifyTheStatusCodeIs(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6382100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User should verify the updateUserAddress response body has message \"Address updated successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Address updated successfully\"",
+                  "offset": 67
+                }
+              ],
+              "location": "TC2_AddressStep.userShouldVerifyTheUpdateUserAddressResponseBodyHasMessage(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Address"
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "Deleting user address",
+        "description": "",
+        "id": "address-module-api-automation;deleting-user-address",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1762500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "User add headers",
+            "match": {
+              "location": "TC2_AddressStep.userAddHeaders()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 15427200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User passes payload for deleting address",
+            "match": {
+              "location": "TC2_AddressStep.userPassesPayloadForDeletingAddress()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 715812300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "User send delete request for deleteAddress endpoint",
+            "match": {
+              "location": "TC2_AddressStep.userSendDeleteRequestForDeleteAddressEndpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 113000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonStep.userShouldVerifyTheStatusCodeIs(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6889700,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User should verify the deleteAddress response body has message \"Address deleted successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Address deleted successfully\"",
+                  "offset": 63
+                }
+              ],
+              "location": "TC2_AddressStep.userShouldVerifyTheDeleteAddressResponseBodyHasMessage(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Address"
+          }
+        ]
+      },
+      {
+        "line": 33,
+        "name": "Getting user address",
+        "description": "",
+        "id": "address-module-api-automation;getting-user-address",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2494900,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "User add headers",
+            "match": {
+              "location": "TC2_AddressStep.userAddHeaders()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 734618600,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "User send get request for getUserAddress endpoint",
+            "match": {
+              "location": "TC2_AddressStep.userSendGetRequestForGetUserAddressEndpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 117700,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonStep.userShouldVerifyTheStatusCodeIs(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 37616500,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "User should verify the getUserAddress response body has message \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 64
+                }
+              ],
+              "location": "TC2_AddressStep.userShouldVerifyTheGetUserAddressResponseBodyHasMessage(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Address"
+          }
+        ]
+      }
+    ],
+    "name": "Address Module API Automation",
+    "description": "",
+    "id": "address-module-api-automation",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Features/TC2_Address.feature",
+    "tags": [
+      {
+        "name": "@Address",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "User uploads profile picture",
+        "description": "",
+        "id": "change-profile-picture-module-api-automation;user-uploads-profile-picture",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3035000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User adds headers for form data",
+            "match": {
+              "location": "TC3_ChangeProfilePicStep.userAddsHeadersForFormData()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 24718600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User passes form data as payload to change profile picture",
+            "match": {
+              "location": "TC3_ChangeProfilePicStep.userPassesFormDataAsPayloadToChangeProfilePicture()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29034146300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User send post request for changeProfilePic endpoint",
+            "match": {
+              "location": "TC3_ChangeProfilePicStep.userSendPostRequestForChangeProfilePicEndpoint()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 130900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should verify the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonStep.userShouldVerifyTheStatusCodeIs(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18198400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User verify the changeProfilePic response body message \"Profile updated Successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Profile updated Successfully\"",
+                  "offset": 55
+                }
+              ],
+              "location": "TC3_ChangeProfilePicStep.userVerifyTheChangeProfilePicResponseBodyMessage(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ProfilePic"
+          }
+        ]
+      }
+    ],
+    "name": "Change Profile Picture Module API Automation",
+    "description": "",
+    "id": "change-profile-picture-module-api-automation",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Features/TC3_ChangeProfilePic.feature",
+    "tags": [
+      {
+        "name": "@ProfilePic",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
