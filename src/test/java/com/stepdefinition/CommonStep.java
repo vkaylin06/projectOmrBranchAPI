@@ -20,7 +20,6 @@ public class CommonStep extends BaseClass {
 	 */
 	@Then("User should verify the status code is {int}")
 	public void userShouldVerifyTheStatusCodeIs(Integer expected) {
-		System.out.println("***Assertion***");
 		Assert.assertEquals(TC1_LoginStep.statusCode, expected.intValue(), "verify response code");
 		Assert.assertEquals(TC2_AddressStep.statusCode, expected.intValue(), "verify response code");
 		Assert.assertEquals(TC3_ChangeProfilePicStep.statusCode, expected.intValue(), "verify response code");
